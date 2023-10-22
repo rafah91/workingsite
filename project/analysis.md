@@ -4,12 +4,11 @@ Job offer:
     - Title
     - Category
     - agency
-    - logo agency
     - location
     - Salary
     - created_at
     - vacancy
-    - job nature
+    - nature
     - application date
     - Description
     - knowledge requirements
