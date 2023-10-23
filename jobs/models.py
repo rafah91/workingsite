@@ -27,19 +27,19 @@ class Job(models.Model):
         self.slug = slugify(self.title) 
         super(Job, self).save(*args, **kwargs)
     
-class Category:
+class Category(models.Model):
     name=models.CharField(_('Name'),max_length=120)
     image=models.ImageField(_('Image'),upload_to='categories')
-    job_count=models.IntegerField(_('Job Count'),max_length=10000)
+    job_count=models.IntegerField(_('Job Count'))
     slug=models.SlugField(null=True,blank=True)
     def __str__(self):
         return self.name
     
     def save(self, *args, **kwargs):
-        self.slug = slugify(self.title)
+        self.slug = slugify(self.name)
         super(Category, self).save(*args, **kwargs)
     
-class Company:
+class Company(models.Model):
     name=models.CharField(_('Name'),max_length=120)
     logo=models.ImageField(_('Logo'),upload_to='campany')
     presentation=models.TextField(_('Presentation'),max_length=10000)
@@ -50,5 +50,5 @@ class Company:
         return self.name
     
     def save(self, *args, **kwargs):
-        self.slug = slugify(self.title)   
+        self.slug = slugify(self.name)   
         super(Company, self).save(*args, **kwargs)
