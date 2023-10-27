@@ -41,7 +41,7 @@ class Category(models.Model):
     
 class Company(models.Model):
     name=models.CharField(_('Name'),max_length=120)
-    logo=models.ImageField(_('Logo'),upload_to='campany')
+    logo=models.ImageField(_('Logo'),upload_to='campanies')
     presentation=models.TextField(_('Presentation'),max_length=10000)
     website=models.TextField(_('Website'),max_length=300)
     email=models.TextField(_('Email'),max_length=300)
