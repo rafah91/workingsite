@@ -40,6 +40,10 @@ INSTALLED_APPS = [
     
     #my apps
     'jobs',
+
+    #3party app
+    'rest_framework',
+    'django_filters'
 ]
 
 MIDDLEWARE = [
